@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+  var Test1 = function(){
+    this.a = 10
+  }
+
+  Test1.prototype.z = 50
+
+  var t1 = new Test1()
+  document.write(t1.a + "<br>")
+  document.write(t1.z + "<br>")
+  document.write("<br> <br> <br>")
+
+  var Test2 = function(){
+    Test1.call(this)
+    this.b = 20
+  }
+  Test2.prototype = Object.create(Test1.prototype)
+
+  var t2 = new Test2()
+  document.write(t2.b + "<br>")
+  document.write(t2.a + "<br>")
+  document.write(t2.z)
+</script>
+
+
+</body>
+</html>

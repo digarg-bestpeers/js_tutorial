@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+  // function expression
+  var myfun1 = function show(){
+    document.write("dinesh")
+  };
+
+  // Anonymous function
+  var myfun2 = function(){
+    document.write("dinesh")
+  };
+
+  // Arrow function
+  var myfun = () => {
+    document.write("dinesh")
+  }
+  myfun()
+
+  // Arrow function with parameter
+  var myfun2 = (a) => {
+    document.write("<br>" + a)
+  }
+  myfun2(10)
+
+  // Arrow function with default parameter
+  var myfun3 = (a,b=20) => {
+    document.write("<br>" + a + " " + b)
+  }
+  myfun3(10)
+  myfun3(10,40)
+
+  // Arrow function with rest parameter
+  var myfun4 = (a, ...args) => {
+    document.write("<br>" + a + "   " + args)
+  }
+  myfun4(10,20,30,40,50)
+
+  // Arrow Function
+  var myfun5 = a => document.write("<br>" + a)
+  myfun5(10)
+
+  // Arrow Function
+  var myfun5 = a => {
+    document.write("<br>" + a);
+    document.write("<br> dinesh")
+  };
+  myfun5(50)
+</script>
+
+
+<!-- <script type="text/javascript">
+  // Function expression
+  var myfun1 = function show(a){
+    return a;
+  }
+
+  // Anonymous function
+  var myfun2 = function(b) {
+    return b;
+  }
+
+  // Arrow function
+  var myfun3 = c => { return c; };
+
+  // Arrow function
+  var myfun4 = c => c;
+
+  document.write(myfun4(10))
+</script> -->
+
+
+</body>
+</html>

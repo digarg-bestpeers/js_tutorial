@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+  var mixin = function(target, ...sources){
+    Object.assign(target, ...sources)
+  }
+  var eating = {eat: "eating executed"}
+  var walking = {walk: "walking executed"}
+  var talking = {talk: "talking executed"}
+
+  var Human = function(){
+
+  }
+  mixin(Human.prototype, eating, walking, talking)
+
+  Rahul = new Human()
+  Sumit = new Human()
+  document.write(Rahul.eat + "<br>")
+  document.write(Rahul.walk + "<br>")
+  document.write(Rahul.talk + "<br><br><br>")
+  document.write(Sumit.eat + "<br>")
+  document.write(Sumit.walk + "<br>")
+  document.write(Sumit.talk + "<br><br><br>")
+
+  var Robot = function(){
+
+  }
+  mixin(Robot.prototype, walking, talking)
+
+  Robo1 = new Robot()
+  Robo2 = new Robot()
+  document.write(Robo1.walk + "<br>")
+  document.write(Robo1.talk + "<br><br>")
+  document.write(Robo2.walk + "<br>")
+  document.write(Robo2.talk + "<br> <br>")
+</script>
+</body>
+</html>

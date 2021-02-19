@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+<!-- <script type="text/javascript">
+  function Mobile(){
+    this.model = 'Galaxy';
+    this.price = function(){
+      document.write(this.model + "Price Rs 3000")
+    }
+  }
+  var samsung = new Mobile();
+  samsung.price()
+</script> -->
+
+<!-- Constructor with parameter -->
+
+<!-- <script type="text/javascript">
+  function Mobile(model_no){
+    this.model = model_no;
+    this.price = function(){
+      document.write(this.model + "Price Rs 3000")
+    }
+  }
+  var samsung = new Mobile('Galaxy')
+  var nokia = new Mobile('3310')
+  samsung.price()
+
+  document.write("<br>")
+  nokia.price()
+</script> -->
+
+
+<!-- Check Property Existance -->
+
+<!-- <script type="text/javascript">
+  function Mobile(model_no){
+    this.model = model_no;
+    this.memory = 4;
+  }
+  var samsung = new Mobile('Galaxy');
+  var nokia = new Mobile('3310');
+
+  if(typeof nokia.memory !== 'undefined'){
+    document.write("Available")
+  }
+  else{
+    document.write("Does not Exist")
+  }
+</script> -->
+
+
+<!-- <script type="text/javascript">
+  function Mobile(model_no){
+    this.model = model_no;
+    this.memory = 4;
+  }
+  var samsung = new Mobile('Galaxy');
+  var nokia = new Mobile('3310');
+
+  if('memory' in samsung){
+    document.write("Available")
+  }
+  else{
+    document.write("Does not Exist")
+  }
+</script> -->
+
+
+<script type="text/javascript">
+  function Mobile(model_no){
+    this.model = model_no;
+    this.memory = 4;
+  }
+  var samsung = new Mobile('Galaxy');
+  var nokia = new Mobile('3310');
+
+  if(nokia.hasOwnProperty('memory')){
+    document.write("Available")
+  }
+  else{
+    document.write("Does not Exist")
+  }
+</script>
+
+
+
+
+
+
+</body>
+</html>

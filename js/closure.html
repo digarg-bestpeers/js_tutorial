@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+<!-- <script type="text/javascript">
+  var i = 10;
+  function show(){
+    var j = 20
+    document.write(j + "<br>")
+    document.write(i + "<br>")
+  }
+
+  show()
+</script> -->
+
+<script type="text/javascript">
+  function show(){
+    var j = "J is a Local variable of Outer Function"
+    document.write(j + "<br>")
+    function innerFun() {
+      var k = 'k is a Local variable of inner function'
+      document.write(k + "<br>")
+      document.write(j + "<br>")
+    }
+    innerFun()
+    document.write(k + "<br>")
+  }
+
+  show()
+</script>
+
+
+</body>
+</html>

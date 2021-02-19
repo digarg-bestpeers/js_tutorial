@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+<!-- Factory Function -->
+
+<!-- <script type="text/javascript">
+  function mobile(){
+    return {
+      model: 'Galaxy',
+      price: function(){
+        return "Price Rs. 3000";
+      }
+    };
+  }
+
+  var samsung = mobile()
+  document.write(samsung.model + " " + samsung.price());
+</script> -->
+
+
+<!-- Factory Function with parameter -->
+
+<!-- <script type="text/javascript">
+  function mobile(model_no){
+    return {
+      model: model_no,
+      price: function(){
+        return "Price Rs. 3000";
+      }
+    };
+  }
+
+  var samsung = mobile("Galaxy")
+  document.write(samsung.model + " " + samsung.price());
+  document.write("<br>")
+
+  var nokia = mobile("3310")
+  document.write(nokia.model + " " + nokia.price());
+</script> -->
+
+
+<!-- <script type="text/javascript">
+  function person(firstName,lastName){
+    return {
+      firstName: firstName,
+      lastName: lastName,
+    }
+  }
+
+  var p1 = person('Dinesh', 'Garg')
+  document.write(p1.firstName + " " + p1.lastName)
+</script> -->
+
+
+<!-- <script type="text/javascript">
+  function person(firstName,lastName){
+    return {
+      firstName: firstName,
+      lastName: lastName,
+      accessory: function(...args){
+        return args;
+      }
+    }
+  }
+
+var p1 = person('dinesh','garg')
+document.write(p1.firstName + "  " + p1.lastName + "  " + p1.accessory('Mobile','Laptop'))
+
+</script> -->
+
+
+<script type="text/javascript">
+  function person(){
+    return {
+      firstName: arguments[0],
+      lastName: arguments[1],
+      accessory: function(){
+        return [arguments[0], arguments[1]];
+      }
+    }
+  }
+
+var p1 = person('Dinesh','Garg')
+document.write(p1.firstName + "  " + p1.lastName + "  " + p1.accessory('mobile','laptop'))
+
+</script>
+
+</body>
+</html>

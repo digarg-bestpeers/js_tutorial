@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+<!-- Using Object Literals -->
+<!-- <script type="text/javascript">
+  var fees = {};
+  fees['Rahul'] = 100;
+  fees.Sumit = 200;
+  fees['Rohan'] = 300;
+  fees["Super Man"] = 400;
+  document.write(fees['Sumit'] + "<br>")
+  document.write(fees.Rahul + "<br>")
+  document.write(fees["Super Man"])
+</script> -->
+
+
+<!-- <script type="text/javascript">
+  var fees = {};
+  fees['Rahul'] = 100;
+  fees['total'] = function() { return(100+200)}
+  fees.total1 = function(){return(200+200)}
+
+  document.write(fees.total() + "<br>")
+  document.write(fees['total']() + "<br>")
+  document.write(fees.total() + "<br>")
+  document.write(fees.total1())
+</script> -->
+
+
+<!-- <script type="text/javascript">
+  var fees = {Rahul:100, Sumit:200, Rohan:300, "Super Man":400}
+
+  document.write(fees['Rahul'] + "<br>")
+  document.write(fees.Sumit + "<br>")
+  document.write(fees["Super Man"])
+</script>
+ -->
+
+<!-- <script type="text/javascript">
+  var fees = {Rahul:100, Sumit:200, Rohan:300, "Super Man":400, total:function(){return(100+200+300+400)}}
+
+  document.write(fees['Rahul'] + "<br>")
+  document.write(fees.Sumit + "<br>")
+  document.write(fees["Super Man"] + "<br>")
+  document.write(fees.total() + "<br>")
+  document.write(fees['total']())
+</script> -->
+
+
+<!-- Using Object constructor -->
+
+<!-- <script type="text/javascript">
+  var fees = new Object();
+  fees['Rahul'] = 100;
+  fees.Sumit = 200;
+  fees['Rohan'] = 300;
+  fees['total'] = function(){return(100+200+300)}
+
+  document.write(fees['Rahul'] + "<br>")
+  document.write(fees.Rohan + "<br>")
+  document.write(fees.Sumit + "<br>")
+  document.write(fees.total() + "<br>")
+  document.write(fees['total']())
+</script> -->
+
+
+<!-- Adding Properties and Methods -->
+
+<!-- <script type="text/javascript">
+  var fees = {Rahul:100, Sumit:200}
+  document.write(fees.Rahul + " " + fees.Sumit + "<br>")
+  fees.Rohan = 300      // fees['Rohan'] = 300
+  document.write(fees.Rohan + " " + fees.Rahul + " " + fees.Sumit + "<br>")
+  fees.total = function(){return(100+200+300)}
+  document.write(fees.total() + " " + fees.Rohan + " " + fees.Rahul + " " + fees.Sumit + "<br>")
+  console.log(fees)
+</script> -->
+
+
+<!-- Deleting Properties -->
+
+<script type="text/javascript">
+  var fees = {Rahul:100, Sumit:200}
+  document.write(fees.Rahul + " " + fees.Sumit + "<br>")
+  console.log(fees)
+  delete fees.Rahul;
+  document.write(fees.Rahul + " " + fees.Sumit + "<br>")
+  console.log(fees)
+</script>
+
+</body>
+</html>

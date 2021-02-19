@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+  var Mobile = function(model_no){
+    // intsancr member
+    this.model = model_no;
+    this.price = 3000;
+  }
+  var samsung = new Mobile('Galaxy')
+  var nokia = new Mobile('3310')
+  // samsung.color = 'white'
+  // nokia.color = 'white'
+  // classname.prototype.key = 'value'
+  // prototype member
+  Mobile.prototype.color = 'white'
+  document.write(samsung.color + "<br>");
+  document.write(nokia.color);
+  console.log(samsung)
+  console.log(nokia)
+</script>
+
+
+
+</body>
+</html>

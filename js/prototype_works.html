@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+
+<!-- <script type="text/javascript">
+  function Mobile(){
+
+  }
+  document.write(Mobile)
+  console.log(Mobile.prototype)
+
+  var lg = new Mobile();
+  console.log(lg.__proto__)
+
+  // verify
+  console.log(Mobile.prototype === lg.__proto__)
+  console.log(Mobile === lg.__proto__.constructor)
+  console.log(Mobile === Mobile.prototype.constructor)
+</script> -->
+
+
+
+<script type="text/javascript">
+  function Mobile(){
+    this.a = 20;
+  }
+
+  Mobile.prototype.a = 10;
+
+  var lg = new Mobile()
+  console.log(lg.a)
+  // console.log(lg.__proto__.a)
+</script>
+
+
+
+
+</body>
+</html>

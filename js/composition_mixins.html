@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+<!-- <script type="text/javascript">
+  // Function for inheritance
+  function extend(Child, Parent){
+    Child.prototype = Object.create(Parent.prototype);
+    Child.prototype.constructor = Child;
+  }
+
+  // Super Class
+  var Human = function(){
+
+  }
+  // Prototype Member
+  Human.prototype.eat = function(){
+    return 'Super class eat method';
+  }
+  Human.prototype.walk = function(){
+    return 'Super class walk method';
+  }
+  Human.prototype.talk = function(){
+    return 'Super class talk method';
+  }
+
+  // Sub class
+  var Animal = function(){
+
+  }
+  // sub class Animal extending superclass Human
+  extend(Animal,Human)
+
+  // Sub class Robot
+  var Robot = function() {
+
+  }
+  // sub class Robot extending superclass Human
+  extend(Robot, Human)
+</script> -->
+
+
+
+<!-- <script type="text/javascript">
+  // Composition or Mixins
+  var eating = {
+    eat: function(){
+      return "I can eat <br>"
+    }
+  }
+
+  var walking = {
+    walk: function(){
+      return "I can walk <br>"
+    }
+  }
+
+  var talking = {
+    talk: function(){
+      return "I can talk <br>"
+    }
+  }
+
+  var starting = {
+    start: function(){
+      return "Robocop start <br>";
+    }
+  }
+
+  var Rahul = Object.assign({}, eating, walking, talking)
+  document.write(Rahul.eat());
+  document.write(Rahul.walk());
+  document.write(Rahul.talk());
+
+  var RoboCop = Object.assign({}, starting, walking, talking)
+  document.write(RoboCop.start())
+  document.write(RoboCop.walk())
+  document.write(RoboCop.talk())
+</script> -->
+
+
+<!-- <script type="text/javascript">
+  // Composition or Mixins
+  var eating = {
+    eat: function(){
+      return "I can eat <br>"
+    }
+  }
+
+  var walking = {
+    walk: function(){
+      return "I can walk <br>"
+    }
+  }
+
+  var talking = {
+    talk: function(){
+      return "I can talk <br>"
+    }
+  }
+
+  // Human Class
+  var Human = function(){
+
+  }
+
+  // Composting features to Human
+  Object.assign(Human.prototype, eating, walking, talking)
+
+  var Rahul = new Human();
+  var Sumit = new Human();
+  document.write(Rahul.eat());
+  document.write(Rahul.walk());
+  document.write(Rahul.talk());
+
+
+  // Robot Class
+  var Robot = function(){
+
+  }
+  // Composting features to Robot
+  Object.assign(Robot.prototype, walking, talking)
+
+  var RoboCop1 = new Robot()
+  var RoboCop2 = new Robot()
+  document.write(RoboCop1.walk())
+  document.write(RoboCop1.talk())
+</script>
+ -->
+
+
+<script type="text/javascript">
+  // Composition or Mixins
+
+  // mixins Function
+  function mixin(target, ...sources){
+    Object.assign(target, ...sources)
+  }
+
+  var eating = {
+    eat: function(){
+      return "I can eat <br>"
+    }
+  }
+
+  var walking = {
+    walk: function(){
+      return "I can walk <br>"
+    }
+  }
+
+  var talking = {
+    talk: function(){
+      return "I can talk <br>"
+    }
+  }
+
+  // Human Class
+  var Human = function(){
+
+  }
+
+  // Composting features to Human
+  mixin(Human.prototype, eating, walking, talking)
+
+  var Rahul = new Human();
+  var Sumit = new Human();
+  document.write(Rahul.eat());
+  document.write(Rahul.walk());
+  document.write(Rahul.talk());
+
+
+  // Robot Class
+  var Robot = function(){
+
+  }
+  // Composting features to Robot
+  mixin(Robot.prototype, walking, talking)
+
+  var RoboCop1 = new Robot()
+  var RoboCop2 = new Robot()
+  document.write(RoboCop1.walk())
+  document.write(RoboCop1.talk())
+  document.write(RoboCop2.walk())
+  document.write(RoboCop2.talk())
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <script type="text/javascript">
+    // Function for inheritance
+    function extend(Child, Parent){
+      Child.prototype = Object.create(Parent.prototype);
+      Child.prototype.constructor = Child;
+    }
+
+    //Super Class
+    var Mobile = function() {
+
+    }
+    // Prototype Member
+    Mobile.prototype.show = function(){ return "Super Class Method"}
+
+    // Sub Class
+    var Samsung = function(){
+
+    }
+
+    // sub class Samsung extending super class Mobile
+    extend(Samsung, Mobile);
+
+    // creating cub class object
+    var sam = new Samsung()
+    var mob = new Mobile()
+
+
+    // Accessing super class property model using sub class object
+    // document.write(sam.show(), "<br>")
+
+
+    // Method overriding
+    Samsung.prototype.show = function() { return "Sub class Method" }
+
+    document.write(sam.show() + "<br>")
+    document.write(mob.show() + "<br>")
+
+
+  </script>
+</body>
+</html>

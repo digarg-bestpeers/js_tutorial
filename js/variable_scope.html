@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+
+<!-- <script type="text/javascript">
+  var i = "i am global variable"
+  function show(){
+    document.write(i + "<br>")
+  }
+
+  show()
+  document.write("out side fuction" + "<br>")
+  document.write(i + "<br>")
+</script> -->
+
+
+<!-- <script type="text/javascript">
+  function show(){
+    var j = "i am local variable"
+    document.write(j + "<br>")
+  }
+
+  show()
+</script> -->
+
+
+<!-- <script type="text/javascript">
+  function show(){
+    j = "i am global variable inside function"
+    document.write(j + "<br>")
+  }
+
+  show()
+  document.write("Outside the function <br>")
+  document.write(j + "<br>")
+</script> -->
+
+
+<script type="text/javascript">
+  function show(){
+    var j = "j is a local variable of outer function"
+    document.write(j + "<br>")
+
+    function innerFun(){
+      var k = "k is a local variable of inner function"
+      document.write(k + "<br>")
+      document.write(j + "<br>")
+    }
+    innerFun();
+  }
+
+  show()
+</script>
+
+
+
+</body>
+</html>
